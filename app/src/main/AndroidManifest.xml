@@ -40,6 +40,11 @@
             android:label="@string/top_images" >
         </activity>
         <activity
+            android:name=".ui.activities.TopTestListActivity"
+            android:label="@string/top_tests" >
+        </activity>
+
+        <activity
             android:name=".ui.activities.ImageActivity" >
         </activity>
     </application>

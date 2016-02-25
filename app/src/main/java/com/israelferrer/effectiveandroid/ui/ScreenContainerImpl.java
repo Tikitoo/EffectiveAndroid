@@ -18,6 +18,7 @@ import com.israelferrer.effectiveandroid.presenters.ScreenContainerPresenter;
 import com.israelferrer.effectiveandroid.presenters.ScreenContainerPresenterImpl;
 import com.israelferrer.effectiveandroid.ui.activities.TopArticleListActivity;
 import com.israelferrer.effectiveandroid.ui.activities.TopImagesListActivity;
+import com.israelferrer.effectiveandroid.ui.activities.TopTestListActivity;
 import com.israelferrer.effectiveandroid.ui.views.ScreenContainerView;
 import com.israelferrer.effectiveandroid.util.image.CircleTransform;
 import com.israelferrer.effectiveandroid.util.image.ImageLoader;
@@ -75,6 +76,8 @@ public class ScreenContainerImpl implements ScreenContainer, ScreenContainerView
             navigationView.getMenu().getItem(0).setChecked(true);
         } else if (activity instanceof TopImagesListActivity) {
             navigationView.getMenu().getItem(1).setChecked(true);
+        } else if (activity instanceof TopTestListActivity) {
+            navigationView.getMenu().getItem(2).setChecked(true);
         }
 
         navigationView.setNavigationItemSelectedListener(new NavigationView
@@ -92,6 +95,11 @@ public class ScreenContainerImpl implements ScreenContainer, ScreenContainerView
                     case R.id.drawer_top_images:
                         if (!(activity instanceof TopImagesListActivity)) {
                             intent = new Intent(activity, TopImagesListActivity.class);
+                        }
+                        break;
+                    case R.id.drawer_top_tests:
+                        if (!(activity instanceof TopTestListActivity)) {
+                            intent = new Intent(activity, TopTestListActivity.class);
                         }
                         break;
                 }

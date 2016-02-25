@@ -6,6 +6,7 @@
     <string name="action_logout">Logout</string>
     <string name="media"/>
     <string name="top_images">Top Images</string>
+    <string name="top_tests">Top Tests</string>
     <string name="top_articles">Top Articles</string>
     <string name="avatar_description">avatar picture</string>
 </resources>
